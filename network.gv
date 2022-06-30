@@ -1,0 +1,240 @@
+digraph g {
+	graph [nodesep=1 ranksep=2 splines=false]
+	edge [arrowhead=none color="#707070"]
+	subgraph cluster_input {
+		node [fillcolor="black:white" fontcolor=white shape=square style=filled]
+		color=white label="Convolutional Neural Network for emotions recognition
+
+
+
+Input Layer"
+		1 [label="Image
+ 48 x 48 pixels
+Grayscale" fontcolor=white]
+	}
+	conv_2 -> 2
+	1 -> conv_2
+	subgraph cluster_1 {
+		color="#5faad0" style=filled
+		conv_2 [label="Convolutional Layer
+Kernel Size: 5x5
+Filters: 64" shape=square]
+		2 [label="64
+Feature Maps" shape=square]
+	}
+	2 -> 3
+	subgraph cluster_2 {
+		color=white
+		3 [label="Activation Layer
+Function: relu" fillcolor="#00b894" fontcolor=white shape=octagon style=filled]
+	}
+	3 -> 4
+	subgraph cluster_3 {
+		color=white
+		4 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	4 -> 5
+	subgraph cluster_4 {
+		color=white
+		5 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	conv_6 -> 6
+	5 -> conv_6
+	subgraph cluster_5 {
+		color="#5faad0" style=filled
+		conv_6 [label="Convolutional Layer
+Kernel Size: 5x5
+Filters: 128" shape=square]
+		6 [label="128
+Feature Maps" shape=square]
+	}
+	6 -> 7
+	subgraph cluster_6 {
+		color=white
+		7 [label="Activation Layer
+Function: relu" fillcolor="#00b894" fontcolor=white shape=octagon style=filled]
+	}
+	7 -> 8
+	subgraph cluster_7 {
+		color=white
+		8 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	8 -> 9
+	subgraph cluster_8 {
+		color=white
+		9 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	conv_10 -> 10
+	9 -> conv_10
+	subgraph cluster_9 {
+		color="#5faad0" style=filled
+		conv_10 [label="Convolutional Layer
+Kernel Size: 3x3
+Filters: 512" shape=square]
+		10 [label="512
+Feature Maps" shape=square]
+	}
+	10 -> 11
+	subgraph cluster_10 {
+		color=white
+		11 [label="Activation Layer
+Function: relu" fillcolor="#00b894" fontcolor=white shape=octagon style=filled]
+	}
+	11 -> 12
+	subgraph cluster_11 {
+		color=white
+		12 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	12 -> 13
+	subgraph cluster_12 {
+		color=white
+		13 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	conv_14 -> 14
+	13 -> conv_14
+	subgraph cluster_13 {
+		color="#5faad0" style=filled
+		conv_14 [label="Convolutional Layer
+Kernel Size: 3x3
+Filters: 512" shape=square]
+		14 [label="512
+Feature Maps" shape=square]
+	}
+	14 -> 15
+	subgraph cluster_14 {
+		color=white
+		15 [label="Activation Layer
+Function: relu" fillcolor="#00b894" fontcolor=white shape=octagon style=filled]
+	}
+	15 -> 16
+	subgraph cluster_15 {
+		color=white
+		16 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	16 -> 17
+	subgraph cluster_16 {
+		color=white
+		17 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	17 -> 18
+	subgraph cluster_17 {
+		color=white
+		18 [label=Flattening fillcolor="#2c3e50" fontcolor=white shape=invtriangle style=filled]
+	}
+	18 -> 19
+	18 -> 20
+	18 -> 21
+	18 -> 22
+	18 -> 23
+	18 -> 24
+	18 -> 25
+	18 -> 26
+	18 -> 27
+	18 -> 28
+	subgraph cluster_18 {
+		color=white
+		rank=same
+		label=" (+246)" labeljust=right labelloc=b
+		19 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		20 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		21 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		22 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		23 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		24 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		25 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		26 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		27 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		28 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+	}
+	19 -> 29
+	20 -> 29
+	21 -> 29
+	22 -> 29
+	23 -> 29
+	24 -> 29
+	25 -> 29
+	26 -> 29
+	27 -> 29
+	28 -> 29
+	subgraph cluster_19 {
+		color=white
+		29 [label="Activation Layer
+Function: relu" fillcolor="#00b894" fontcolor=white shape=octagon style=filled]
+	}
+	29 -> 30
+	subgraph cluster_20 {
+		color=white
+		30 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	30 -> 31
+	30 -> 32
+	30 -> 33
+	30 -> 34
+	30 -> 35
+	30 -> 36
+	30 -> 37
+	30 -> 38
+	30 -> 39
+	30 -> 40
+	subgraph cluster_21 {
+		color=white
+		rank=same
+		label=" (+502)" labeljust=right labelloc=b
+		31 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		32 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		33 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		34 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		35 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		36 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		37 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		38 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		39 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		40 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+	}
+	31 -> 41
+	32 -> 41
+	33 -> 41
+	34 -> 41
+	35 -> 41
+	36 -> 41
+	37 -> 41
+	38 -> 41
+	39 -> 41
+	40 -> 41
+	subgraph cluster_22 {
+		color=white
+		41 [label="Activation Layer
+Function: relu" fillcolor="#00b894" fontcolor=white shape=octagon style=filled]
+	}
+	41 -> 42
+	subgraph cluster_23 {
+		color=white
+		42 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	42 -> 43
+	42 -> 44
+	42 -> 45
+	42 -> 46
+	42 -> 47
+	42 -> 48
+	42 -> 49
+	subgraph cluster_output {
+		node [color="#2ecc71" fontcolor="#2ecc71" shape=circle style=filled]
+		color=white
+		rank=same
+		labeljust=1
+		43 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		44 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		45 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		46 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		47 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		48 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		49 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		label="Output Layer" labelloc=bottom
+	}
+	arrowShape=none
+}
